@@ -1,0 +1,139 @@
+//  "rootDir" =  "./src"
+// "outDir": "./build/JS"
+// "include":["src"]
+
+// <div class="container">
+//         <h1>BMI CALCULATOR</h1>
+
+//         <!-- displays the calculated bmi value and its category-->
+//         <div class="display">
+//             <p id="result">20.0</p>
+//             <p id="category">Normal Weight</p>
+//         </div>
+
+//         <!--a range slider for selecting the weight-->
+//         <div class="row">
+//             <input type="range" min="20" max="200" value="20" id="weight" oninput="calculate()">
+//             <span id="weight-val">20kg</span>
+//         </div>
+
+//         <!--a range slider for selecting the height-->
+//         <div class="row">
+//             <input type="range" min="100" max="250" value="100" id="height" oninput="calculate()">
+//             <span id="height-val">100cm</span>
+//         </div>
+//     </div>
+//     <script src="/build/JS/bmi.js"></script>
+
+//   //the void type does not return any value
+// function calculate():void{
+//     //stores the calculated BMI as a string
+//     var bmi:string;
+//     //holds the reference to an HTML element with the id result
+//     var result = document.getElementById("result") as HTMLElement;
+//     //the height value is extracted from the input element and the value is converted into an integer
+//     var height= parseInt((document.getElementById("height") as HTMLInputElement).value);
+//     //the weight value is extracted from the input element and the value is converted into an integer
+//     var weight =parseInt((document.getElementById("weight") as HTMLInputElement).value);
+
+//     //displays weight and height values
+//     document.getElementById("weight-val")!.textContent = weight + "kg";
+//     document.getElementById("height-val")!.textContent = height + "cm";
+
+//     //calculate the BMI using the height and weight values and toFixed ensures the BMI is rounded to one decimal place 
+//     bmi = (weight / Math.pow(height / 100, 2)).toFixed(1);
+//     result.textContent = bmi;
+//     let category: string;
+
+//     //determines the BMI category based on the calculated BMI value
+//     if(parseFloat(bmi)< 18.5){
+//         category = "Underweight 😔";
+//         result.style.color= "#ffc44d";
+//         //checks if it is between 18.5 and 24.9
+//     } else if (parseFloat(bmi) >= 18.5 && parseFloat(bmi) <= 24.9){
+//         category = "Normal weight 🤩";
+//         result.style.color = "#0be881";
+//         //checks if it is between 25 and 29.9
+//     } else if (parseFloat(bmi) >= 25 && parseFloat(bmi) <= 29.9){
+//         category = "Overweight 😮";
+//         result.style.color = "#ff884d";
+//     } else {
+//         category = "Obese 😱";
+//         result.style.color = "#ff5e57";
+//     }
+
+//     //display BMI category
+//     document.getElementById("category")!.textContent = category;
+// }  
+
+// *, *::before, *::after{
+//     padding: 0;
+//     margin: 0;
+//     box-sizing: border-box;
+// }
+
+// body{
+//     height: 100vh;
+//     font-family: monospace;
+//     background-color: #3D5B59;
+// }
+
+// .container{
+//     background-color: #bd8c92;
+//     padding: 10px 40px;
+//     width: 350px;
+//     margin: 50px auto;
+//     border-radius: 5px;
+// }
+
+// .container h1{
+//     text-align: center;
+//     font-size: 23px;
+//     margin: 20px auto;
+//     font-family: cursive;
+// }
+
+// .row{
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+// }
+
+// .display{
+//     margin-bottom: 30px;
+//     margin-top: 30px;
+//     font-size: 20px;
+// }
+
+// #result, #category{
+//     text-align: center;
+//     margin-right: 10px;
+//     font-weight: 1000;
+// }
+
+// .row span{
+//     margin-bottom: 20px;
+//     font-size: 20px;
+//     margin-right: 15px;
+// }
+
+// input[type=range]{
+//     width: 50%;
+//     margin-bottom: 20px;
+//     height: 5px;
+//     appearance: none;
+//     background-color: black;
+//     border-radius: 5px;
+//     outline: none;
+//     cursor: pointer;
+// }
+
+// input[type="range"]::-webkit-slider-thumb{
+//     appearance: none;
+//     height: 15px;
+//     Width: 15px;
+//     background-color: #B5E5CF;
+//     cursor: pointer;
+//     border-radius: 100%;
+// } 
+
